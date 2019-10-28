@@ -3,7 +3,8 @@
 ## Author:  German Gonzalez
 ##----------------------------------------------------------------------
 
-ggnmds <- function(object, env, sites_lab=TRUE, species_lab=TRUE,
+ggnmds <- function(object, env, species_scores=FALSE, 
+           sites_lab=TRUE, species_lab=TRUE,
            hulls=FALSE, shape=shape, color=shape) 
 {
 
@@ -14,8 +15,10 @@ ggnmds <- function(object, env, sites_lab=TRUE, species_lab=TRUE,
   }
   
   ## Species scores
-  scores_species <- as.data.frame(scores(object, "species"))
-  scores_species <- rownames_to_column(scores_species, var= "species")
+  if(species_scores){
+    scores_species <- as.data.frame(scores(object, "species"))
+    scores_species <- rownames_to_column(scores_species, var= "species")
+  }
   
   p <- ggplot() + 
         geom_point(data=scores_sites, aes_string(x="NMDS1", y="NMDS2", # add points
