@@ -1,0 +1,31 @@
+Package: ggmultivariate
+Version: 0.1
+Date: 2019-10-28
+Title: ggmultivariate
+Description: Plots for multivariate methods using ggplot2
+Authors@R: c(person("German A", "Gonzalez", role=c("aut", "cre"),
+             email="germangfeler@gmail.com", comment=c(ORCID = "0000-0001-9030-5622")))
+Author: German A Gonzalez [aut, cre] (<https://orcid.org/0000-0001-9030-5622>)
+Maintainer: German A Gonzalez <broman@wisc.edu>
+Depends:
+    R (>= 3.5.0)
+Imports:
+    utils,
+    graphics,
+    grDevices,
+    stats,
+    ggplot2,
+    ggrepel,
+    dplyr,
+    tibble
+Suggests:
+    testthat,
+    devtools,
+    roxygen2
+License: GPL-3
+URL: https://github.com/germangfeler/ggmultivariate/
+BugReports: https://github.com/germangfeler/ggmultivariate/issues
+Encoding: UTF-8
+ByteCompile: true
+LazyData: true
+
